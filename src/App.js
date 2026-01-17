@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Experience from './components/Experience';
+import TypewriterBridge from './components/TypewriterBridge';
+import Features from './components/Features';
+import Process from './components/Process';
+import EarlyAdopters from './components/EarlyAdopters';
+import CursorRing from './components/CursorRing';
 
 function App() {
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Hero />
+      <Experience />
+      <TypewriterBridge />
+      <Features />
+      <Process />
+      <EarlyAdopters />
+      <CursorRing />
     </div>
   );
 }
