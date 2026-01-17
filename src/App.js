@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// src/App.js
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -7,34 +8,34 @@ import Features from './components/Features';
 import Process from './components/Process';
 import EarlyAdopters from './components/EarlyAdopters';
 import CursorRing from './components/CursorRing';
-import WaitlistModal from './components/WaitlistModal';
+import Preloader from './components/Preloader';
+import './css/style.css';
 
 function App() {
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const openWaitlist = () => setIsWaitlistOpen(true);
-  const closeWaitlist = () => setIsWaitlistOpen(false);
-
-  useEffect(() => {
-    // Smooth scroll behavior
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
-    return () => {
-      document.documentElement.style.scrollBehavior = 'auto';
-    };
-  }, []);
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   return (
     <div className="App">
-      <Navbar onOpenWaitlist={openWaitlist} />
-      <Hero />
-      <Experience />
-      <TypewriterBridge />
-      <Features />
-      <Process />
-      <EarlyAdopters onOpenWaitlist={openWaitlist} />
-      <CursorRing />
-      <WaitlistModal isOpen={isWaitlistOpen} onClose={closeWaitlist} />
+      {/* Show preloader while loading */}
+      {loading && <Preloader onComplete={handleLoadingComplete} />}
+      
+      {/* Main content - only render after loading complete */}
+      {!loading && (
+        <>
+          <CursorRing />
+          <Navbar />
+          <Hero />
+          <Experience />
+          <TypewriterBridge />
+          <Features />
+          <Process />
+          <EarlyAdopters />
+        </>
+      )}
     </div>
   );
 }

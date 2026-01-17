@@ -17,7 +17,6 @@ function Hero() {
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
-        <div className="hero-origin smash-fade">STYLING INDIA</div>
 
         <h1 className="brand smash-title">STYLEGENCE</h1>
         

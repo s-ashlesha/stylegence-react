@@ -68,23 +68,6 @@ html {
   overflow: hidden;
 }
 
-/* =========================
-   HERO ORIGIN — STYLING INDIA
-========================= */
-.hero-origin {
-  font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.75em;
-  text-transform: uppercase;
-  color: rgba(159, 236, 217, 0.85);
-  margin-bottom: 1.5rem;
-  transform: translateY(-10px);
-  text-align: center;
-  user-select: none;
-  pointer-events: none;
-  animation: float-soft 6s ease-in-out infinite;
-}
 
 @keyframes float-soft {
   0%, 100% { transform: translateY(0); }
@@ -168,6 +151,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  
 }
 
 .brand {
@@ -176,6 +160,7 @@ html {
   letter-spacing: 0.35em;
   margin-bottom: 1rem;
   animation: fadeUp 1s ease forwards;
+  
 }
 
 .tagline {
@@ -1176,6 +1161,7 @@ body {
 
   .brand {
     letter-spacing: 0.2em;
+    font: monument extended, sans-serif;
   }
   
   .process-container {
