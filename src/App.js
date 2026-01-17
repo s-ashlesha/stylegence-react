@@ -10,6 +10,9 @@ import EarlyAdopters from './components/EarlyAdopters';
 import CursorRing from './components/CursorRing';
 import Preloader from './components/Preloader';
 import './css/style.css';
+import WaitlistModal from './components/WaitlistModal';
+
+    
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,9 +34,11 @@ function App() {
           <Hero />
           <Experience />
           <TypewriterBridge />
+  
           <Features />
           <Process />
           <EarlyAdopters />
+        
         </>
       )}
     </div>

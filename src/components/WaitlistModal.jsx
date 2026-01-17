@@ -1,4 +1,5 @@
-import React from 'react';
+// src/components/WaitlistModal.jsx
+import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 
 // Set app element for accessibility
@@ -7,6 +8,19 @@ if (typeof window !== 'undefined') {
 }
 
 function WaitlistModal({ isOpen, onClose }) {
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <Modal
       isOpen={isOpen}
@@ -14,6 +28,8 @@ function WaitlistModal({ isOpen, onClose }) {
       className="waitlist-modal"
       overlayClassName="waitlist-overlay"
       closeTimeoutMS={300}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
     >
       <div className="modal-content">
         <button 
@@ -29,6 +45,7 @@ function WaitlistModal({ isOpen, onClose }) {
           height="100%"
           frameBorder="0"
           title="Stylegence Waitlist Form"
+          allow="camera; microphone; autoplay; encrypted-media;"
         ></iframe>
       </div>
     </Modal>
