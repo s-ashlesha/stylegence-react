@@ -2446,3 +2446,208 @@ body {
 .site-footer {
   margin-top: 0.1rem;
 }
+
+/* =====================================================
+   ENHANCED MOBILE FIX FOR INFINITE SCROLLING STRIP
+   ===================================================== */
+
+.cta-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(110, 255, 216, 0.05);
+  border-top: 1px solid rgba(110, 255, 216, 0.2);
+  border-bottom: 1px solid rgba(110, 255, 216, 0.2);
+  padding: 20px 0;
+  margin-top: 80px;
+}
+
+.cta-scroll-track {
+  display: flex;
+  width: fit-content;
+  /* Base animation for desktop */
+  animation: ctaScroll 20s linear infinite;
+}
+
+.cta-scroll-content {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #6effd8;
+  white-space: nowrap;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(110, 255, 216, 0.5);
+}
+
+/* Desktop animation - smooth and moderate */
+@keyframes ctaScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =====================================================
+   TABLET OPTIMIZATION (768px - 1024px)
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .cta-scroll-track {
+    /* Slightly faster for tablet */
+    animation: ctaScroll 17s linear infinite;
+  }
+  
+  .cta-scroll-content {
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+    padding: 0 25px;
+    letter-spacing: 2.5px;
+  }
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION (up to 768px)
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .cta-scroll-container {
+    padding: 16px 0;
+    margin-top: 60px;
+  }
+  
+  .cta-scroll-track {
+    /* 25% faster than desktop */
+    animation: ctaScrollMobile 15s linear infinite;
+  }
+  
+  .cta-scroll-content {
+    /* Smaller font, more padding to prevent overlap */
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    padding: 0 35px; /* Critical: increased padding */
+    letter-spacing: 2px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE OPTIMIZATION (up to 480px)
+   ===================================================== */
+
+@media (max-width: 480px) {
+  .cta-scroll-track {
+    /* 40% faster than desktop */
+    animation: ctaScrollMobile 12s linear infinite;
+  }
+  
+  .cta-scroll-content {
+    /* Fixed size for consistency */
+    font-size: 1.1rem;
+    padding: 0 45px; /* Maximum padding for smallest screens */
+    letter-spacing: 1.5px;
+  }
+  
+  .cta-scroll-container {
+    padding: 14px 0;
+  }
+}
+
+/* =====================================================
+   EXTRA SMALL SCREENS (up to 375px - iPhone SE, etc.)
+   ===================================================== */
+
+@media (max-width: 375px) {
+  .cta-scroll-track {
+    /* Even faster for very small screens */
+    animation: ctaScrollMobile 10s linear infinite;
+  }
+  
+  .cta-scroll-content {
+    font-size: 0.95rem;
+    padding: 0 50px; /* Extra padding for safety */
+    letter-spacing: 1.2px;
+  }
+}
+
+/* Mobile-specific animation keyframes */
+@keyframes ctaScrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =====================================================
+   PERFORMANCE OPTIMIZATIONS
+   ===================================================== */
+
+/* GPU acceleration for smooth 60fps animation */
+.cta-scroll-track {
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.cta-scroll-content {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent text flicker during animation */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* =====================================================
+   ACCESSIBILITY - REDUCED MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-scroll-track {
+    /* Respect user's motion preferences */
+    animation: ctaScrollSlow 40s linear infinite;
+  }
+}
+
+@keyframes ctaScrollSlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =====================================================
+   LANDSCAPE MODE FIXES
+   ===================================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .cta-scroll-container {
+    padding: 12px 0;
+  }
+  
+  .cta-scroll-content {
+    font-size: 1rem;
+    padding: 0 30px;
+  }
+}
+
+/* =====================================================
+   HIGH DPI SCREENS (Retina displays)
+   ===================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .cta-scroll-content {
+    /* Crisper text rendering on retina */
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
