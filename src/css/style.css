@@ -1396,3 +1396,1053 @@ body {
     font-size: 16px;
   }
 }
+
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   Add these at the END of your style.css file
+   Desktop styles remain unchanged above
+========================= */
+
+/* Tablet devices (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-logo {
+    font-size: 0.8rem;
+  }
+
+  .waitlist-btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Experience section */
+  .experience {
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .experience-visual {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .mannequin-video {
+    max-height: 60vh;
+  }
+
+  .experience-content {
+    text-align: center;
+  }
+
+  /* Process section */
+  .process-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .process-visual {
+    order: -1;
+  }
+
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Hide custom cursor on mobile */
+  .cursor-ring {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+
+  /* Navbar mobile */
+  .navbar {
+    padding: 1rem 1.2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  .waitlist-btn {
+    font-size: 0.65rem;
+    padding: 0.45rem 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Hero section mobile */
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .brand {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .smash-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    letter-spacing: 0.1em;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-journey {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .journey-item {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    margin-top: 0;
+  }
+
+  .journey-divider {
+    width: 5px;
+    height: 10px;
+    transform: rotate(90deg);
+    margin-top: 0;
+  }
+
+  .launching-soon {
+    font-size: 2rem;
+  }
+
+  /* Experience section mobile */
+  .experience {
+    min-height: auto;
+    padding: 2.5rem 1.5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .experience-visual {
+    order: 1;
+    margin: 2rem 0;
+  }
+
+  .video-mask {
+    max-width: 100%;
+  }
+
+  .mannequin-video {
+    max-height: 50vh;
+  }
+
+  .experience-content {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .experience-content h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .experience-content p.muted {
+    font-size: 0.9rem;
+  }
+
+  .orb {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Typewriter bridge mobile */
+  .typewriter-bridge {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .typewriter-content {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    letter-spacing: 0.05em;
+  }
+
+  .typewriter-cursor {
+    height: 1.2em;
+    width: 3px;
+    margin-left: 4px;
+  }
+
+  /* Features section mobile */
+  .features {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .features-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .feature-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .feature-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .feature-card.active .feature-desc {
+    max-height: 200px;
+  }
+
+  .feature-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Process section mobile */
+  .process {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .process-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .journey-heading {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .process-steps {
+    padding-left: 0;
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  .process-step {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.1rem;
+  }
+
+  .process-step p {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .process-visual {
+    order: 1;
+  }
+
+  /* Early adopters mobile */
+  .early-adopters {
+    min-height: auto;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .early-content h2 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.2rem;
+  }
+
+  .early-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.9rem 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .early-cta-strip-wrapper {
+    margin-top: 3rem;
+  }
+
+  .cta-strip {
+    padding: 1.2rem 0;
+  }
+
+  .cta-track {
+    gap: 2.5rem;
+  }
+
+  .cta-track span {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+  }
+
+  /* Footer mobile */
+  .site-footer {
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+
+  .scroll-indicator span {
+    height: 30px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Navbar extra small */
+  .navbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .nav-logo {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+
+  .waitlist-btn {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Hero extra small */
+  .hero-content {
+    padding: 0 0.8rem;
+  }
+
+  .brand {
+    font-size: clamp(1.5rem, 8vw, 2.3rem);
+    letter-spacing: 0.08em;
+  }
+
+  .smash-title {
+    font-size: clamp(1.5rem, 8vw, 2.3rem);
+    letter-spacing: 0.08em;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-journey {
+    margin-top: 1rem;
+  }
+
+  .journey-item {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+  }
+
+  .launching-soon {
+    font-size: 1.5rem;
+  }
+
+  /* Experience extra small */
+  .experience {
+    padding: 2rem 1rem;
+  }
+
+  .experience-content h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .experience-content p {
+    font-size: 0.9rem;
+  }
+
+  .experience-content p.muted {
+    font-size: 0.85rem;
+  }
+
+  .orb {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Typewriter extra small */
+  .typewriter-bridge {
+    padding: 2.5rem 1rem;
+  }
+
+  .typewriter-content {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+
+  /* Features extra small */
+  .features {
+    padding: 3rem 1rem;
+  }
+
+  .features-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.3rem 1.2rem;
+    border-radius: 16px;
+  }
+
+  .feature-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .feature-desc {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Process extra small */
+  .process {
+    padding: 3rem 1rem;
+  }
+
+  .journey-heading {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .process-step h3 {
+    font-size: 1rem;
+  }
+
+  .process-step p {
+    font-size: 0.9rem;
+  }
+
+  /* Early adopters extra small */
+  .early-adopters {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .early-content h2 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .early-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.8rem;
+  }
+
+  .cta-track span {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  /* Footer extra small */
+  .site-footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Waitlist Modal Mobile Responsive */
+@media (max-width: 768px) {
+  .waitlist-modal {
+    width: 95%;
+    height: 90vh;
+    max-height: none;
+    border-radius: 16px;
+  }
+
+  .close-modal-button {
+    top: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .waitlist-modal {
+    width: 98%;
+    height: 92vh;
+    border-radius: 12px;
+  }
+
+  .close-modal-button {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Preloader Mobile Responsive */
+@media (max-width: 768px) {
+  .preloader-brand-name {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    letter-spacing: 0.25em;
+  }
+
+  .preloader-brand-tagline {
+    font-size: clamp(0.3rem, 1.2vw, 0.5rem);
+  }
+
+  .preloader-orb-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 50px;
+  }
+
+  .preloader-orb {
+    width: 60px;
+    height: 60px;
+  }
+
+  .preloader-progress-container {
+    max-width: 250px;
+    padding: 0 20px;
+    margin: 50px auto 20px;
+  }
+
+  .preloader-progress-text {
+    font-size: 1rem;
+  }
+
+  .preloader-loading-dot {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .preloader-brand-name {
+    font-size: clamp(1.2rem, 9vw, 2rem);
+    letter-spacing: 0.2em;
+  }
+
+  .preloader-brand-tagline {
+    font-size: clamp(0.25rem, 1vw, 0.45rem);
+  }
+
+  .preloader-orb-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 40px;
+  }
+
+  .preloader-orb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .preloader-progress-container {
+    max-width: 200px;
+    margin: 40px auto 20px;
+  }
+
+  .preloader-progress-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .feature-card:hover {
+    transform: none;
+  }
+
+  .waitlist-btn:hover,
+  .cta-button:hover {
+    transform: none;
+  }
+
+  /* Make tap targets larger for touch */
+  .waitlist-btn,
+  .cta-button,
+  .close-modal-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  /* Disable cursor ring on touch devices */
+  .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .experience {
+    min-height: auto;
+  }
+
+  .typewriter-bridge {
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .process {
+    min-height: auto;
+  }
+
+  .early-adopters {
+    min-height: auto;
+  }
+}
+
+/* Ultra-wide mobile (iPhone Pro Max, etc.) */
+@media (min-width: 391px) and (max-width: 480px) {
+  .brand {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+
+  .features-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+}
+
+/* iPhone SE specific (375px width) */
+@media (max-width: 375px) {
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+
+  .brand,
+  .smash-title {
+    font-size: clamp(1.4rem, 7.5vw, 2.1rem);
+    letter-spacing: 0.05em;
+    padding: 0 0.5rem;
+  }
+}
+
+/* iPhone 12 Pro and similar (390px width) */
+@media (min-width: 376px) and (max-width: 428px) {
+  .brand,
+  .smash-title {
+    font-size: clamp(1.6rem, 7.5vw, 2.4rem);
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  /* Ensure videos don't overflow */
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust video masks for mobile */
+  .video-mask {
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+}
+
+/* Safe area insets for notched devices (iPhone X, etc.) */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    .navbar {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-left: max(1.2rem, env(safe-area-inset-left));
+      padding-right: max(1.2rem, env(safe-area-inset-right));
+    }
+
+    .hero-content,
+    .experience,
+    .features,
+    .process,
+    .early-adopters {
+      padding-left: max(1.5rem, env(safe-area-inset-left));
+      padding-right: max(1.5rem, env(safe-area-inset-right));
+    }
+
+    .site-footer {
+      padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* iPhone SE ONLY Fix - 375x667 */
+@media (max-width: 375px) {
+  .hero-content {
+    padding: 0 0.2rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  .brand,
+  .smash-title {
+    font-size: 0.95rem !important;
+    letter-spacing: 0 !important;
+    padding: 0 !important;
+    max-width: calc(100vw - 0.4rem) !important;
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+  }
+
+  .hero {
+    padding: 0 !important;
+  }
+
+  /* Disable letter-spacing changes during smash animation */
+  @keyframes growPhase {
+    from {
+      transform: scale(1);
+      letter-spacing: 0 !important;
+    }
+    to {
+      transform: scale(1.25);
+      letter-spacing: 0 !important;
+    }
+  }
+
+  @keyframes smashBack {
+    0% { 
+      transform: scale(1.25);
+      letter-spacing: 0 !important;
+    }
+    60% { 
+      transform: scale(0.9);
+      letter-spacing: 0 !important;
+    }
+    100% {
+      transform: scale(1);
+      letter-spacing: 0 !important;
+    }
+  }
+}
+
+/*phone fix*/
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.1rem;
+    letter-spacing: 0.18em;
+  }
+}
+
+.hero-title {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+
+
+/* ============================================================================
+   MOBILE CHROME FIX – iPhone SE (375px) & Narrow Viewports Stabilization
+   Prevents overflow, scales chrome titles gracefully, keeps liquid silver luxury
+   ============================================================================ */
+
+/* Force viewport containment + prevent horizontal scroll on mobile */
+@viewport {
+  width: device-width;
+  initial-scale: 1.0;
+  maximum-scale: 1.0;
+  user-scalable: no;
+}
+
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    font-size: 14px; /* better base scaling */
+  }
+
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hero – full containment */
+  .hero {
+    height: 100dvh !important; /* dynamic viewport height for iOS */
+    padding: 0 0.8rem !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content {
+    padding: 0 1rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
+  /* Chrome title – aggressive mobile scaling + no overflow */
+  .brand,
+  .smash-title {
+    font-size: clamp(1.6rem, 9vw, 2.8rem) !important;
+    letter-spacing: 0.08em !important;
+    line-height: 0.92 !important;
+    margin-bottom: 0.8rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: calc(100vw - 1.6rem) !important;
+    padding: 0 0.4rem !important;
+  }
+
+  /* Smash animation – disable letter-spacing growth on narrow screens to prevent break */
+  @keyframes growPhase {
+    from {
+      transform: scale(1);
+      letter-spacing: 0.08em !important;
+    }
+    to {
+      transform: scale(1.25);
+      letter-spacing: 0.08em !important;
+    }
+  }
+
+  @keyframes smashBack {
+    0%   { transform: scale(1.25); letter-spacing: 0.08em !important; }
+    60%  { transform: scale(0.88); letter-spacing: 0.08em !important; }
+    100% { transform: scale(1.00); letter-spacing: 0.08em !important; }
+  }
+
+  /* Tagline + journey – compact & readable */
+  .tagline {
+    font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+    letter-spacing: 0.12em !important;
+    margin: 0.5rem 0 1rem !important;
+    max-width: 100% !important;
+  }
+
+  .hero-journey {
+    flex-wrap: wrap !important;
+    gap: 0.6rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .journey-item {
+    font-size: 0.95rem !important;
+    letter-spacing: 0.25em !important;
+    margin-top: 0 !important;
+  }
+
+  .journey-divider {
+    width: 6px !important;
+    height: 3px !important;
+    margin: 0 0.4rem !important;
+  }
+
+  /* Launching Soon – punchy but contained */
+  .launching-soon {
+    font-size: clamp(1.4rem, 7vw, 2rem) !important;
+    letter-spacing: 0.03em !important;
+    margin-top: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Navbar – pill shrinks, logo tightens */
+  .navbar {
+    padding: 0.9rem 1rem !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .nav-logo {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.2em !important;
+    white-space: nowrap !important;
+  }
+
+  .waitlist-btn {
+    font-size: 0.6rem !important;
+    padding: 0.4rem 0.8rem !important;
+    min-width: auto !important;
+  }
+
+  /* Scroll indicator – less intrusive */
+  .scroll-indicator {
+    bottom: 1.2rem !important;
+  }
+
+  .scroll-indicator span {
+    height: 30px !important;
+  }
+
+  /* Experience – stack vertically */
+  .experience {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1rem !important;
+    gap: 2rem !important;
+  }
+
+  .experience-visual {
+    order: -1 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mannequin-video {
+    max-height: 50vh !important;
+  }
+
+  /* Typewriter bridge – compact */
+  .typewriter-bridge {
+    min-height: 50vh !important;
+    padding: 2rem 1rem !important;
+  }
+
+  .typewriter-content {
+    font-size: clamp(1.3rem, 5vw, 2rem) !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  /* Features – single column */
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+  }
+
+  .feature-card {
+    padding: 1.3rem 1.2rem !important;
+    border-radius: 16px !important;
+  }
+
+  /* Process – stack */
+  .process-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .journey-heading {
+    text-align: center !important;
+    font-size: clamp(1.4rem, 5vw, 1.9rem) !important;
+  }
+
+  /* Early adopters – compact strip */
+  .early-adopters {
+    padding: 3rem 1rem 1.5rem !important;
+  }
+
+  .cta-button {
+    font-size: 0.85rem !important;
+    padding: 0.8rem 1.8rem !important;
+  }
+
+  .cta-track span {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.2em !important;
+  }
+}
+
+/* Extra narrow fix (iPhone SE exact 375px) */
+@media (max-width: 375px) {
+  .brand,
+  .smash-title {
+    font-size: clamp(1.4rem, 8vw, 2.1rem) !important;
+    letter-spacing: 0.05em !important;
+    padding: 0 0.3rem !important;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem !important;
+  }
+
+  .waitlist-btn {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.55rem !important;
+  }
+}
+
+/* Prevent any remaining overflow on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    touch-action: manipulation;
+  }
+}
+
+
+/* Lower the CTA strip to be just above footer */
+.early-cta-strip-wrapper {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+.early-adopters {
+  padding-bottom: 1rem;
+}
+
+.site-footer {
+  margin-top: 0.1rem;
+}
