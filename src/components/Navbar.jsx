@@ -1,10 +1,12 @@
 import React from 'react';
 
-function Navbar() {
+function Navbar({ onOpenWaitlist }) {
   return (
     <header className="navbar">
       <div className="nav-logo">STYLEGENCE</div>
-      <button className="waitlist-btn">JOIN THE WAITLIST</button>
+      <button className="waitlist-btn" onClick={onOpenWaitlist}>
+        JOIN THE WAITLIST
+      </button>
     </header>
   );
 }

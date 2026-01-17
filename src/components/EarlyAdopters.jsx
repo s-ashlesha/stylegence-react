@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EarlyAdopters() {
+function EarlyAdopters({ onOpenWaitlist }) {
   return (
     <section className="early-adopters">
       <div className="early-content">
@@ -9,7 +9,9 @@ function EarlyAdopters() {
           Be the first to experience Stylegence, access exclusive features, and help shape 
           the future of fashion technology.
         </p>
-        <a href="#" className="cta-button">Join the Waitlist!</a>
+        <button className="cta-button" onClick={onOpenWaitlist}>
+          Join the Waitlist!
+        </button>
       </div>
 
       <div className="early-cta-strip-wrapper">
